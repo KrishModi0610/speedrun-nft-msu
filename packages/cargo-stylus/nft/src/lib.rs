@@ -1,3 +1,5 @@
+use stylus_cache_sdk::{is_contract_cacheable};
+
 extern crate alloc;
 
 // Modules and imports
@@ -69,6 +71,10 @@ impl StylusNFT {
         Ok(())
     }
 
+    pub fn is_cacheable(&self) -> bool {
+        is_contract_cacheable()
+    }
+    
     /// Mints an NFT to the specified address, and does not call onErc712Received
     pub fn mint_to(&mut self, to: Address) -> Result<(), Vec<u8>> {
         self.erc721.mint(to)?;
