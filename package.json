@@ -28,5 +28,8 @@
   },
   "engines": {
     "node": ">=18.18.0"
+  },
+  "dependencies": {
+    "smart-cache-cli": "^2.1.7"
   }
 }
